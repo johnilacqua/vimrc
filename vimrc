@@ -52,3 +52,9 @@ set path=.,/usr/include,~/repos/viv/src,~/repos/viv/protocols,,
 
 autocmd BufEnter * EnableStripWhitespaceOnSave
 let g:better_whitespace_filetypes_blacklist=[]
+
+" this line is in /etc/vim/vimrc, but doesn't seem to be working for some reason
+" it works if I put it here
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
