@@ -40,6 +40,8 @@ set wrap
 set tabstop=4
 set shiftwidth=4
 
+autocmd FileType cmake setlocal expandtab
+
 set scrolloff=5
 
 nnoremap j gj
