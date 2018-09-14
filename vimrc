@@ -50,6 +50,10 @@ nnoremap k gk
 set statusline=%<%F\ %h%m%r%y%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
 
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
 set path=.,/usr/include,~/repos/viv/src,~/repos/viv/protocols,,
 
 autocmd BufEnter * EnableStripWhitespaceOnSave
